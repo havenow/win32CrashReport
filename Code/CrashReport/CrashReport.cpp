@@ -3,6 +3,7 @@
 
 #include "stdafx.h"
 #include "CrashReport.h"
+#include "ExceptionHandler.h"
 
 #define MAX_LOADSTRING 100
 
@@ -26,6 +27,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     UNREFERENCED_PARAMETER(lpCmdLine);
 
     // TODO: 在此放置代码。
+	CExceptionHandler::Instance()->Init(lpCmdLine);
 
     // 初始化全局字符串
     LoadStringW(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
@@ -171,6 +173,8 @@ INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
     case WM_COMMAND:
         if (LOWORD(wParam) == IDOK || LOWORD(wParam) == IDCANCEL)
         {
+			int* p = nullptr;
+			int i = *p;
             EndDialog(hDlg, LOWORD(wParam));
             return (INT_PTR)TRUE;
         }
