@@ -30,12 +30,18 @@
     <ClInclude Include="CrashReport.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="ExceptionHandler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="CrashReport.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ExceptionHandler.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
