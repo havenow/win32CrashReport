@@ -35,9 +35,7 @@ void DisableSetUnhandledExceptionFilter()
 
 ```c++
 ============================================
-
 摘录自msdn
-
 /****************************** Module Header ******************************\
 Module Name:  CppExceptionHandling.cpp
 Project:      CppExceptionHandling
