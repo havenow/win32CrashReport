@@ -25,7 +25,7 @@ void DisableSetUnhandledExceptionFilter()
 	SetUnhandledExceptionFilter(CExceptionHandler::MyCrashHandler);
   //禁用SetUnhandledExceptionFilter,防止异常回调函数被覆盖.
 	DisableSetUnhandledExceptionFilter();
-  //生成dmp文件	
+  //CExceptionHandler::MyCrashHandler函数中生成dmp文件	
 	::MiniDumpWriteDump(::GetCurrentProcess(), ::GetCurrentProcessId(), hFile, mdt, &einfo, NULL, NULL);
 ```
 
